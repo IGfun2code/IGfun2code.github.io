@@ -285,7 +285,6 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
     uri (1.1.1)
-    wdm (0.2.0)
     webrick (1.9.2)
 
 PLATFORMS
@@ -331,7 +330,6 @@ DEPENDENCIES
   jemoji
   observer
   ostruct
-  wdm (>= 0.1.0)
 
 BUNDLED WITH
   4.0.4
