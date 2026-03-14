@@ -88,6 +88,10 @@
     id="highlight_theme_dark"
   >
   <script>
+    {% if site.force_dark_theme %}
+    window.determineThemeSetting = function () { return "dark"; };
+    localStorage.setItem("theme", "dark");
+    {% endif %}
     initTheme();
   </script>
 {% endif %}
