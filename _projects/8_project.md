@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Robotex Competition
-description: image of competition
+description: 2nd place in the internation Robotics competition
 img: assets/img/9.jpg
 importance: 2
 category: work

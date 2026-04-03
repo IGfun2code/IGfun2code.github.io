@@ -1,7 +1,7 @@
 ---
 layout: page
-title: F1 Tenth
-description: Image of my F1 tenth car and team
+title: F1 Tenth Racing
+description: Complete end-to-end stack development for an autonomous racing event.
 img: assets/img/4.jpg
 importance: 1
 category: work

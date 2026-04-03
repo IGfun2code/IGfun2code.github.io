@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
+title: Simmulated 3-linked Robot
+description: Used an Actor Critic model to find the optimal gait of a 3-link robot.
 img: assets/img/7.jpg
 redirect: https://unsplash.com
 importance: 3

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Motion Control for Autonomous Vehicles
-description: with background image
+title: Motion Control for Autonomous Vehicles and Drones
+description: Use of modern control concepts such as LQR and Adaptice Control with planners like A* to control a car and drone in webots.
 img: assets/img/12.jpg
 importance: 1
 category: work

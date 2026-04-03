@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Short Horizon RL for Trajectory Generation in Extreme Cases
-description: a project with a background image of an autonomous car
+title: Autonomous vehicle trajectory generation
+description: Use of reinforcement learning to spit out local trajectories that may outperform CARLA baselines.
 img: assets/img/3.jpg
 importance: 2
 category: work
