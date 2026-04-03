@@ -402,19 +402,19 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-motion-control-for-autonomous-vehicles",
-          title: 'Motion Control for Autonomous Vehicles',
-          description: "with background image",
+          section: "News",},{id: "projects-motion-control-for-autonomous-vehicles-and-drones",
+          title: 'Motion Control for Autonomous Vehicles and Drones',
+          description: "Use of modern control concepts such as LQR and Adaptice Control with planners like A* to control a car and drone in webots.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-short-horizon-rl-for-trajectory-generation-in-extreme-cases",
-          title: 'Short Horizon RL for Trajectory Generation in Extreme Cases',
-          description: "a project with a background image of an autonomous car",
+            },},{id: "projects-autonomous-vehicle-trajectory-generation",
+          title: 'Autonomous vehicle trajectory generation',
+          description: "Use of reinforcement learning to spit out local trajectories that may outperform CARLA baselines.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-simmulated-3-linked-robot",
+          title: 'Simmulated 3-linked Robot',
+          description: "Used an Actor Critic model to find the optimal gait of a 3-link robot.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-project-4",
@@ -432,14 +432,14 @@ ninja.data = [{
           description: "a project with no image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-f1-tenth",
-          title: 'F1 Tenth',
-          description: "Image of my F1 tenth car and team",
+            },},{id: "projects-f1-tenth-racing",
+          title: 'F1 Tenth Racing',
+          description: "Complete end-to-end stack development for an autonomous racing event.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
             },},{id: "projects-robotex-competition",
           title: 'Robotex Competition',
-          description: "image of competition",
+          description: "2nd place in the internation Robotics competition",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
             },},{id: "projects-project-9",
