@@ -1,81 +1,62 @@
 ---
 layout: page
-title: Autonomous vehicle trajectory generation
-description: Use of reinforcement learning to spit out local trajectories that may outperform CARLA baselines.
-img: assets/img/3.jpg
-importance: 2
+title: RL Trajectory Generation for Interactive Autonomous Driving
+description: Closed-loop trajectory planning in CARLA using PPO for highway merges, left turns, and cut-in analysis.
+img: assets/img/12.jpg
+importance: 3
 category: Autonomous Vehicles
-giscus_comments: true
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This project explores reinforcement learning for short-horizon trajectory generation in highly interactive driving scenarios using CARLA. The goal was to move beyond a purely reactive rule-based planner and instead train a policy that can decide when to yield, commit, slow down, or merge by generating a local trajectory in closed loop. The framework focuses on situations where autonomous vehicles still struggle most: unprotected left turns, highway merges, and sudden cut-ins.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+The overall system keeps planning and control separated. A global A*-based route provides the long-horizon path, while a PPO policy reshapes the near-term trajectory online in response to nearby traffic. That local trajectory is then executed by a fixed CARLA PID controller. This architecture makes it possible to improve the planning layer while keeping low-level control unchanged, so performance differences can be attributed mainly to the learned planner rather than to retuned actuation.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+A major focus of the project was building a repeatable evaluation pipeline instead of only training a policy once and reporting a few successful rollouts. I created controlled closed-loop scenarios in CARLA for left turns, highway merges, and abrupt cut-ins, then compared a classical baseline against a PPO-based planner using the same tracker and the same scenario-level metrics for safety, efficiency, and comfort.
+
+## Technical Highlights
+
+- Built a closed-loop autonomous driving pipeline in CARLA for interactive traffic scenarios
+- Implemented a hierarchical stack with global A* routing, short-horizon local planning, and fixed PID tracking
+- Developed a PPO planner that outputs a local trajectory and target speed instead of direct steering/throttle commands
+- Designed observations that combine ego state, route-following status, gap-level merge features, and nearby-vehicle geometry
+- Parameterized local trajectories using three lateral anchor offsets, a reconnection heading bias, and a target-speed command
+- Converted PPO actions into smooth local paths with Catmull–Rom spline interpolation
+- Created repeatable evaluation scenarios for unprotected left turns, highway merges, and TTC-triggered abrupt cut-ins
+
+## Results
+
+The classical baseline established a strong and measurable reference point across all three scenarios. In the left-turn and highway-merge evaluations, success rates ranged from **73% to 86%** depending on ego behavior and surrounding traffic aggressiveness. In the cut-in scenario, the same baseline controller successfully avoided collision at **70 km/h** but failed at **90 km/h**, revealing a clear sensitivity to higher closing speeds and showing the limitations of purely reactive control.
+
+The learned planner showed its strongest results in the highway-merge task. With the tuned PPO policy, the system achieved an **86% success rate** and reduced the crash rate to **10%**. For successful runs, the **90th-percentile completion time was 17.4 s**, and the **90th-percentile maximum jerk was 547.138 m/s^3**. These results demonstrated that the RL trajectory-generation pipeline worked end-to-end in closed loop and could reliably complete interactive merges in a large majority of trials.
+
+One of the most important outcomes from this project was architectural rather than numerical: PPO performed better when treated as a **local trajectory generator** instead of a selector over predefined route waypoints. Keeping the global route stable while allowing the policy to reshape only the short-horizon path made the planner more responsive to surrounding traffic and improved merge reliability. Reward design also mattered significantly, especially progress shaping, collision avoidance, route adherence, and anti-idling penalties.
+
+The current system still has room to improve. Although PPO improved merge success, some successful trajectories remain abrupt, and the planner does not yet generalize as strongly to the left-turn and cut-in scenarios as it does to highway merging. That makes this project a strong foundation for future work on smoother policy behavior, broader scenario generalization, and robustness under noisy or degraded perception.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/rl_merge_scene.png" title="CARLA highway merge scenario" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/rl_trajectory_generation.png" title="Short-horizon trajectory generation" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/rl_results_compare.png" title="Baseline vs PPO performance summary" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Suggested visuals for the page: the CARLA merge environment, the local-trajectory generation method, and a baseline-versus-PPO results summary.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Tools and Methods
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+**Simulation:** CARLA  
+**Planning:** A* global routing, PPO short-horizon local planning  
+**Control:** CARLA VehiclePIDController  
+**Policy Design:** continuous action space, spline-based trajectory generation, interaction-aware reward shaping  
+**Scenarios:** unprotected left turn, highway merge, abrupt cut-in
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Repository
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+<a href="https://github.com/IGfun2code/AD_RL_CARLA_Project" target="_blank" rel="noopener noreferrer">View the project repository on GitHub</a>
