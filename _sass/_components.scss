@@ -140,6 +140,11 @@ ul.task-list input[type="checkbox"] {
       width: 100%;
     }
 
+    .project-thumb {
+      max-height: 160px;
+      object-fit: cover;
+    }
+
     .card-title {
       font-size: 1.35rem;
     }
