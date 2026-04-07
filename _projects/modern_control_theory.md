@@ -32,13 +32,13 @@ The ground vehicle achieved an average trajectory discrepancy of **0.47 m** usin
 On the aerial side, the quadrotor control system demonstrated strong fault tolerance. The **MRAC + LQR** architecture was able to keep the drone flying with up to **68% thrust loss in one motor**, showing the value of adaptive control for maintaining performance under large model mismatch and actuator failure.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-12 mt-3">
         {% include figure.liquid loading="eager" path="assets/img/modern_control_theory/a_star_path.jpg" title="A * generated path to overtake vehicle in lane" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-12 mt-3">
         {% include figure.liquid loading="eager" path="assets/img/modern_control_theory/a_star_vehicle_specs.png" title="Vehicle response with A*" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-12 mt-3">
         {% include figure.liquid loading="eager" path="assets/img/modern_control_theory/LQR_vehicle_specs.png" title="Vehicle response with LQR" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
