@@ -43,7 +43,7 @@ On the aerial side, the quadrotor control system demonstrated strong fault toler
     </div>
 </div>
 <div class="caption">
-    Example visuals for the project page: vehicle path tracking, quadrotor adaptive-control behavior, and a summary of performance across control methods.
+    Example visuals for the project 3: LQR and A star method to overtake a vehicle on the path.
 </div>
 
 ## Tools and Methods
