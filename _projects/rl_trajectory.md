@@ -4,7 +4,7 @@ title: Autonomous vehicle trajectory generation
 description: Use of reinforcement learning to spit out local trajectories that may outperform CARLA baselines.
 img: assets/img/3.jpg
 importance: 2
-category: work
+category: Autonomous Vehicles
 giscus_comments: true
 ---
 

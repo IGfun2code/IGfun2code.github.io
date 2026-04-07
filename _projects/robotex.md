@@ -4,7 +4,7 @@ title: Robotex Competition
 description: 2nd place in the internation Robotics competition
 img: assets/img/9.jpg
 importance: 2
-category: work
+category: Autonomous Vehicles
 giscus_comments: true
 ---
 
