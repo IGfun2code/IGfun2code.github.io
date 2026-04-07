@@ -417,9 +417,9 @@ ninja.data = [{
           description: "Integrated planning, state estimation, optimal control, and adaptive flight control in Webots.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/modern_control_theory/";
-            },},{id: "projects-autonomous-vehicle-trajectory-generation",
-          title: 'Autonomous vehicle trajectory generation',
-          description: "Use of reinforcement learning to spit out local trajectories that may outperform CARLA baselines.",
+            },},{id: "projects-rl-trajectory-generation-for-interactive-autonomous-driving",
+          title: 'RL Trajectory Generation for Interactive Autonomous Driving',
+          description: "Closed-loop trajectory planning in CARLA using PPO for highway merges, left turns, and cut-in analysis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rl_trajectory/";
             },},{id: "projects-robotex-competition",
