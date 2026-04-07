@@ -414,7 +414,7 @@ ninja.data = [{
               window.location.href = "/projects/f1_tenth/";
             },},{id: "projects-motion-control-for-autonomous-vehicles-and-drones",
           title: 'Motion Control for Autonomous Vehicles and Drones',
-          description: "Use of modern control concepts such as LQR and Adaptice Control with planners like A* to control a car and drone in webots.",
+          description: "Integrated planning, state estimation, optimal control, and adaptive flight control in Webots.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/modern_control_theory/";
             },},{id: "projects-autonomous-vehicle-trajectory-generation",
