@@ -402,51 +402,31 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-motion-control-for-autonomous-vehicles-and-drones",
-          title: 'Motion Control for Autonomous Vehicles and Drones',
-          description: "Use of modern control concepts such as LQR and Adaptice Control with planners like A* to control a car and drone in webots.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-autonomous-vehicle-trajectory-generation",
-          title: 'Autonomous vehicle trajectory generation',
-          description: "Use of reinforcement learning to spit out local trajectories that may outperform CARLA baselines.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-simmulated-3-linked-robot",
+          section: "News",},{id: "projects-simmulated-3-linked-robot",
           title: 'Simmulated 3-linked Robot',
           description: "Used an Actor Critic model to find the optimal gait of a 3-link robot.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
+              window.location.href = "/projects/3_link_robot/";
             },},{id: "projects-f1-tenth-racing",
           title: 'F1 Tenth Racing',
           description: "Complete end-to-end stack development for an autonomous racing event.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
+              window.location.href = "/projects/f1_tenth/";
+            },},{id: "projects-motion-control-for-autonomous-vehicles-and-drones",
+          title: 'Motion Control for Autonomous Vehicles and Drones',
+          description: "Use of modern control concepts such as LQR and Adaptice Control with planners like A* to control a car and drone in webots.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/modern_control_theory/";
+            },},{id: "projects-autonomous-vehicle-trajectory-generation",
+          title: 'Autonomous vehicle trajectory generation',
+          description: "Use of reinforcement learning to spit out local trajectories that may outperform CARLA baselines.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rl_trajectory/";
             },},{id: "projects-robotex-competition",
           title: 'Robotex Competition',
           description: "2nd place in the internation Robotics competition",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
+              window.location.href = "/projects/robotex/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
