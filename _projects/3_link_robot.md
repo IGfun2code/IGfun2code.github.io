@@ -1,10 +1,11 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: Simmulated 3-linked Robot
+description: Used an Actor Critic model to find the optimal gait of a 3-link robot.
+img: assets/img/7.jpg
+redirect: https://unsplash.com
+importance: 1
+category: Robotics
 ---
 
 Every project has a beautiful feature showcase page.
