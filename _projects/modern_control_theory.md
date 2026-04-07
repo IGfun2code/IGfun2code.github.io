@@ -33,18 +33,17 @@ On the aerial side, the quadrotor control system demonstrated strong fault toler
 
 <div class="row">
     <div class="col-12 mt-3">
-        {% include figure.liquid loading="eager" path="assets/img/modern_control_theory/a_star_path.jpg" title="A * generated path to overtake vehicle in lane" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/modern_control_theory/a_star_path.jpg" caption="A* generated path used to overtake a vehicle in-lane." class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-12 mt-3">
-        {% include figure.liquid loading="eager" path="assets/img/modern_control_theory/a_star_vehicle_specs.png" title="Vehicle response with A*" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/modern_control_theory/a_star_vehicle_specs.png" caption="Vehicle response using A* planning." class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-12 mt-3">
-        {% include figure.liquid loading="eager" path="assets/img/modern_control_theory/LQR_vehicle_specs.png" title="Vehicle response with LQR" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/modern_control_theory/LQR_vehicle_specs.png" caption="Vehicle response using LQR control." class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Example visuals for the project 3: LQR and A star method to overtake a vehicle on the path.
-</div>
+Example visuals for the project 3: LQR and A star method to overtake a vehicle on the path.
+
 
 ## Tools and Methods
 
