@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description:
+description: 
 nav: true
 nav_order: 1
 display_categories: [Autonomous Vehicles, Robotics]
@@ -12,9 +12,17 @@ horizontal: true
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
+  <ul class="nav nav-pills project-category-tabs">
+    {% for category in page.display_categories %}
+      <li class="nav-item">
+        <a class="nav-link" href="#{{ category | slugify }}">{{ category }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
+  <a id="{{ category | slugify }}" href="#{{ category | slugify }}">
     <h2 class="category">{{ category }}</h2>
   </a>
   {% assign categorized_projects = site.projects | where: "category", category %}
