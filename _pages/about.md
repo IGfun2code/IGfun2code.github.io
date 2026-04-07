@@ -26,7 +26,7 @@ latest_posts:
 
 I'm currently pursuing my Master's degree in Mechanical Engineering at Carnegie Mellon University, with a concentration in robotics. I'm interested in Machine Learning and Controls engineering internships for Summer 2026.
 
-I have an undergraduate degree in Mechanical Engineering from the University of Texas at Austin and previous internship experience assisting with creating an autonomous vehicle for hazardous locations.  
+I have an undergraduate degree in Mechanical Engineering from the University of Texas at Austin and previous internship experience assisting with creating an autonomous vehicle for hazardous locations.
 
 Here are a few examples of my projects and work:
 
@@ -34,7 +34,7 @@ Here are a few examples of my projects and work:
 
 > Led a team to achieve 2nd place in the International Robotex competition by designing an mini autonomous moon rover that can traverse various terrain and sort specific rocks.
 
-> Initialized PID control with forward and inverse kinematics on a 3 Degree of Freedom robot arm.  
+> Initialized PID control with forward and inverse kinematics on a 3 Degree of Freedom robot arm.
 
 I love connecting with new people, give me a shout @ishangupta1106@gmail.com or here on LinkedIn.
 
