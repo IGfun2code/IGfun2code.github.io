@@ -34,20 +34,35 @@ One of the most important outcomes from this project was architectural rather th
 
 The current system still has room to improve. Although PPO improved merge success, some successful trajectories remain abrupt, and the planner does not yet generalize as strongly to the left-turn and cut-in scenarios as it does to highway merging. That makes this project a strong foundation for future work on smoother policy behavior, broader scenario generalization, and robustness under noisy or degraded perception.
 
+## Images
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/rl_merge_scene.png" title="CARLA highway merge scenario" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/rl_merge_scene.png" caption="CARLA highway merge scenario" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/rl_trajectory_generation.png" title="Short-horizon trajectory generation" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/rl_trajectory_generation.png" caption="Short-horizon trajectory generation" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/rl_results_compare.png" title="Baseline vs PPO performance summary" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3">
+        {% include figure.liquid loading="eager" path="assets/img/rl_results_compare.png" caption="Baseline vs PPO performance summary" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Suggested visuals for the page: the CARLA merge environment, the local-trajectory generation method, and a baseline-versus-PPO results summary.
+Suggested visuals for the page: the CARLA merge environment, the local-trajectory generation method, and a baseline-versus-PPO results summary.
+
+## Project Paper
+
+<div class="mt-3">
+  <iframe
+    src="{{ '/assets/pdf/rl_trajectory.pdf' | relative_url }}"
+    width="100%"
+    height="900"
+    style="border: 1px solid var(--global-divider-color); border-radius: 6px;"
+  ></iframe>
 </div>
+
+<p class="mt-2">
+  <a href="{{ '/assets/pdf/rl_trajectory.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Open the RL trajectory paper in a new tab</a>
+</p>
 
 ## Tools and Methods
 
