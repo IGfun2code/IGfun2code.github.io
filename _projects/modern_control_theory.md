@@ -1,81 +1,57 @@
 ---
 layout: page
 title: Motion Control for Autonomous Vehicles and Drones
-description: Use of modern control concepts such as LQR and Adaptice Control with planners like A* to control a car and drone in webots.
+description: Integrated planning, state estimation, optimal control, and adaptive flight control in Webots.
 img: assets/img/12.jpg
-importance: 1
+importance: 3
 category: Autonomous Vehicles
 related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This project explores how modern control and autonomy methods can be applied across both ground and aerial systems within a shared simulation workflow in Webots. On the ground side, I developed controllers and planning pipelines for a Tesla vehicle driving on the Schenley Park map, progressing from baseline trajectory tracking to obstacle-aware replanning and localization. In parallel, I extended the same control-focused approach to a quadrotor, designing an adaptive controller that maintained flight performance under severe actuator degradation.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+For the autonomous vehicle, I first built PID and pole-placement controllers for lateral and longitudinal regulation, then improved the stack with LQR control and A* replanning to handle dynamic obstacles more effectively. I also implemented an EKF-based SLAM pipeline to support localization and map-consistent navigation.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+For the drone, I designed a Model Reference Adaptive Control (MRAC) architecture on top of a baseline LQR controller to improve robustness when a motor experiences thrust loss.
+
+What makes this project especially interesting is the range of control ideas applied to different vehicle classes. Rather than focusing on a single controller, I compared classical feedback control, optimal control, estimation, motion planning, and adaptive control in one end-to-end autonomy workflow. The result was a broader understanding of how controller choice changes system behavior, tracking quality, robustness, and recovery under uncertainty or failure.
+
+## Technical Highlights
+
+- Built lateral and longitudinal control pipelines for a simulated autonomous vehicle in Webots
+- Linearized vehicle dynamics and applied PID, pole-placement, and LQR control strategies
+- Integrated A* replanning for obstacle-aware route adjustment around moving vehicles
+- Implemented EKF-based SLAM for localization and trajectory execution
+- Designed an MRAC controller with an LQR baseline for quadrotor fault-tolerant flight
+- Evaluated performance through trajectory error, task completion time, and robustness to actuator degradation
+
+## Results
+
+The ground vehicle achieved an average trajectory discrepancy of **0.47 m** using the baseline PID and pole-placement control approach. After upgrading the autonomy stack with **LQR control and A* replanning**, the vehicle completed the route **20% faster** when navigating around a moving obstacle. With the addition of **EKF-based SLAM**, the platform was able to complete the track while staying within an average of **0.7 m** of the intended trajectory.
+
+On the aerial side, the quadrotor control system demonstrated strong fault tolerance. The **MRAC + LQR** architecture was able to keep the drone flying with up to **68% thrust loss in one motor**, showing the value of adaptive control for maintaining performance under large model mismatch and actuator failure.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/controls_car_trajectory.png" title="Vehicle trajectory tracking in Webots" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/controls_drone_response.png" title="Quadrotor adaptive control response" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/controls_results_summary.png" title="Performance comparison across controllers" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Example visuals for the project page: vehicle path tracking, quadrotor adaptive-control behavior, and a summary of performance across control methods.
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Tools and Methods
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+**Simulation:** Webots  
+**Methods:** PID, Pole Placement, LQR, A*, EKF-SLAM, MRAC  
+**Focus Areas:** trajectory tracking, dynamic obstacle handling, localization, robustness, adaptive control
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Repository
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+<a href="https://github.com/IGfun2code/controls_tesla" target="_blank" rel="noopener noreferrer">View the project repository on GitHub</a>
