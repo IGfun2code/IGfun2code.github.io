@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Simmulated 3-linked Robot
+title: Simulated 3-linked Robot
 description: Used an Actor Critic model to find the optimal gait of a 3-link robot.
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+img: assets/video/snake_bot/rl_with_singularity.mp4
 importance: 1
 category: Robotics
 ---
