@@ -402,8 +402,8 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-simmulated-3-linked-robot",
-          title: 'Simmulated 3-linked Robot',
+          section: "News",},{id: "projects-simulated-3-linked-robot",
+          title: 'Simulated 3-linked Robot',
           description: "Used an Actor Critic model to find the optimal gait of a 3-link robot.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_link_robot/";
