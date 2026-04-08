@@ -2,7 +2,7 @@
 layout: page
 title: Robotex Competition
 description: 2nd place in the international Robotics competition
-img: assets/img/robotex/team.png
+img: assets/img/robotex/robot.png
 importance: 4
 category: Robotics
 giscus_comments: true
