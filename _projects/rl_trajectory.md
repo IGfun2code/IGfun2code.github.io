@@ -46,9 +46,11 @@ The current system still has room to improve. Although PPO improved merge succes
   RL trajectory generation in CARLA.
 </div>
 <div class="row">
-    <div class="col-sm mt-3">
-        {% include figure.liquid loading="eager" path="assets/img/rl_merge_scene.png" caption="CARLA highway merge scenario" class="img-fluid rounded z-depth-1" %}
-    </div>
+    <div class="col-sm-10 mt-3 mt-md-0">
+    <img src="{{ '/assets/video/rl_trajectory/left_turn.gif' | relative_url }}" 
+         alt="RL trajectory generation demo" 
+         class="img-fluid rounded z-depth-1">
+  </div>
     <div class="col-sm mt-3">
         {% include figure.liquid loading="eager" path="assets/img/rl_trajectory_generation.png" caption="Short-horizon trajectory generation" class="img-fluid rounded z-depth-1" %}
     </div>
