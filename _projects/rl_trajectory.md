@@ -48,10 +48,12 @@ The current system still has room to improve. Although PPO improved merge succes
          class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/rl_results_compare.png" caption="Baseline vs PPO performance summary" class="img-fluid rounded z-depth-1" %}
+      <img src="{{ '/assets/video/rl_trajectory/cut_in.gif' | relative_url }}" 
+         alt="RL trajectory generation demo" 
+         class="img-fluid rounded z-depth-1">
     </div>
 </div>
-Suggested visuals for the page: the CARLA merge environment, the local-trajectory generation method, and a baseline-versus-PPO results summary.
+The GIFs show the three high-interaction scenarios from left to right: Left turn, highway merge, and cut-in. The first two scenes are with the RL model producing a local trajectory at each timestep. The last scene is the baseline model showing how the vehicle reacts to sudden cut-in.
 
 ## Project Paper
 
