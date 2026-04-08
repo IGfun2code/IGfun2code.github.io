@@ -424,7 +424,7 @@ ninja.data = [{
               window.location.href = "/projects/rl_trajectory/";
             },},{id: "projects-robotex-competition",
           title: 'Robotex Competition',
-          description: "2nd place in the internation Robotics competition",
+          description: "2nd place in the international Robotics competition",
           section: "Projects",handler: () => {
               window.location.href = "/projects/robotex/";
             },},{id: "teachings-data-science-fundamentals",
