@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Robotex Competition
-description: 2nd place in the internation Robotics competition
-img: assets/img/9.jpg
+description: 2nd place in the international Robotics competition
+img: assets/img/robotex/team.png
 importance: 4
 category: Robotics
 giscus_comments: true
@@ -45,28 +45,27 @@ This project taught me a great deal about **rapid prototyping, DFMA, electromech
 More broadly, Robotex was one of my strongest experiences in building a robot as a fully integrated system rather than as separate mechanical and software pieces. The project required packaging, sensing, structure, collection, autonomy, and troubleshooting to all work together. That combination of design ownership, hands-on fabrication, and fast iteration is a big reason why this project remains one of the most meaningful robotics experiences I’ve had.
 
 <div class="row">
-    <div class="col-sm mt-3">
+    <div class="col-12 mt-3">
         {% include figure.liquid loading="eager" path="assets/img/robotex/robot.png" caption="CAD model of Robotex Rover" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3">
+    <div class="col-12 mt-3">
         {% include figure.liquid loading="eager" path="assets/img/robotex/stage.png" caption="Robotex competition field" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3">
+    <div class="col-12 mt-3">
         {% include figure.liquid loading="eager" path="assets/img/robotex/team.png" caption="Robotex team Image: Ranit, Ishan, Raghav (left to right)" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
-<div class="row justify-content-sm-center">
+<div class="row">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/robotex/subsystems.png" title="Robot key systems" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/robotex/subsystems.png" caption="Robot key systems" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/robotex/bom.png" title="Robot BOM" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager"  path="assets/img/robotex/bom.png" caption="Robot BOM" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    The rover architecture centered around four main subsystems: intake, drive, sorting, and solar, all developed within an approximately $150 total budget.
-</div>
+The rover architecture centered around four main subsystems: intake, drive, sorting, and solar, all developed within an approximately $150 total budget.
+
 
 ## Tools and Methods
 
