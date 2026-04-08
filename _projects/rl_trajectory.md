@@ -43,10 +43,9 @@ The current system still has room to improve. Although PPO improved merge succes
          class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-      <video class="img-fluid rounded z-depth-1" autoplay loop muted playsinline controls>
-        <source src="{{ '/assets/video/rl_trajectory/highway_merge.mp4' | relative_url }}" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
+      <img src="{{ '/assets/video/rl_trajectory/highway_merge.gif' | relative_url }}" 
+         alt="RL trajectory generation demo" 
+         class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/rl_results_compare.png" caption="Baseline vs PPO performance summary" class="img-fluid rounded z-depth-1" %}
