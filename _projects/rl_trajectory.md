@@ -34,8 +34,17 @@ One of the most important outcomes from this project was architectural rather th
 
 The current system still has room to improve. Although PPO improved merge success, some successful trajectories remain abrupt, and the planner does not yet generalize as strongly to the left-turn and cut-in scenarios as it does to highway merging. That makes this project a strong foundation for future work on smoother policy behavior, broader scenario generalization, and robustness under noisy or degraded perception.
 
-## Images
-
+## Simulation
+<div class="row justify-content-sm-center">
+  <div class="col-sm-10 mt-3 mt-md-0">
+    <img src="{{ '/assets/video/rl_trajectory/left_turn.gif' | relative_url }}" 
+         alt="RL trajectory generation demo" 
+         class="img-fluid rounded z-depth-1">
+  </div>
+</div>
+<div class="caption">
+  RL trajectory generation in CARLA.
+</div>
 <div class="row">
     <div class="col-sm mt-3">
         {% include figure.liquid loading="eager" path="assets/img/rl_merge_scene.png" caption="CARLA highway merge scenario" class="img-fluid rounded z-depth-1" %}
