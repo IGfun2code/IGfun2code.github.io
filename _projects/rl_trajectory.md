@@ -2,7 +2,7 @@
 layout: page
 title: RL Trajectory Generation for Interactive Autonomous Driving
 description: Closed-loop trajectory planning in CARLA using PPO for highway merges, left turns, and cut-in analysis.
-img: assets/img/12.jpg
+img: '/assets/video/rl_trajectory/highway_merge.gif'
 importance: 2
 category: Autonomous Vehicles
 related_publications: false
