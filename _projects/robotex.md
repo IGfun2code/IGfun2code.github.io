@@ -46,24 +46,22 @@ More broadly, Robotex was one of my strongest experiences in building a robot as
 
 <div class="row">
     <div class="col-sm mt-3">
-        {% include figure.liquid loading="eager" path="assets/img/robotex_team.jpg" caption="Robotex competition team" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/robotex/robot.png" caption="CAD model of Robotex Rover" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3">
-        {% include figure.liquid loading="eager" path="assets/img/robotex_rover_cad.jpg" caption="Robotex rover CAD" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/robotex/stage.png" caption="Robotex competition field" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3">
-        {% include figure.liquid loading="eager" path="assets/img/robotex_field.jpg" caption="Robotex competition field" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/robotex/team.png" caption="Robotex team Image: Ranit, Ishan, Raghav (left to right)" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-Suggested visuals: team photo at Robotex, rover CAD/render, and the moon-rover obstacle course.
-
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/robotex_systems.jpg" title="Robot key systems" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/robotex/subsystems.png" title="Robot key systems" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/robotex_bom.jpg" title="Robot BOM and budget" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/robotex/bom.png" title="Robot BOM" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
