@@ -38,7 +38,7 @@ The current system still has room to improve. Although PPO improved merge succes
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-      <img src="{{ '/assets/video/rl_trajectory/left_turn.gif' | relative_url }}" 
+      <img src="{{ '/assets/video/rl_trajectory/left_turn_cropped.gif' | relative_url }}" 
          alt="RL trajectory generation demo" 
          class="img-fluid rounded z-depth-1">
     </div>
