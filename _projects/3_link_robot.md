@@ -48,14 +48,18 @@ More broadly, the project helped me deepen my understanding of **robot learning,
     <div class="col-sm mt-3 mt-md-0">
       <img src="{{ '/assets/video/snake_bot/with_out_singularity_2000eps.gif' | relative_url }}" 
          alt="RL trajectory generation demo" 
-         class="img-fluid rounded z-depth-1" 
-         caption="3-link robot with no singularity term in reward function">
+         class="img-fluid rounded z-depth-1">
+      <div class="caption mt-2">
+         3-link robot without singularity term in the reward function
+      </div>
     </div>
     <div class="col-sm mt-3 mt-md-0">
       <img src="{{ '/assets/video/snake_bot/with_singularity_2000eps.gif' | relative_url }}" 
          alt="RL trajectory generation demo" 
-         class="img-fluid rounded z-depth-1" 
-         caption="3-link robot with singularity term in reward function">
+         class="img-fluid rounded z-depth-1">
+      <div class="caption mt-2">
+         3-link robot with singularity term in reward function
+      </div>
     </div>
 </div>
 
