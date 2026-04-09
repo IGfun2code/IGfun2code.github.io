@@ -2,7 +2,7 @@
 layout: page
 title: Motion Control for Autonomous Vehicles and Drones
 description: Integrated planning, state estimation, optimal control, and adaptive flight control in Webots.
-img: assets/img/modern_control_theory/sim_pic.png
+img: 'assets/img/modern_control_theory/sim_pic.png'
 importance: 3
 category: Autonomous Vehicles
 related_publications: false
