@@ -32,7 +32,11 @@ horizontal: true
   <div class="container">
     <div class="row row-cols-1">
     {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
+      {% if project.draft %}
+        {% include projects_horizontal.liquid disable_link=true %}
+      {% else %}
+        {% include projects_horizontal.liquid %}
+      {% endif %}
     {% endfor %}
     </div>
   </div>
@@ -58,7 +62,11 @@ horizontal: true
   <div class="container">
     <div class="row row-cols-1">
     {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
+      {% if project.draft %}
+        {% include projects_horizontal.liquid disable_link=true %}
+      {% else %}
+        {% include projects_horizontal.liquid %}
+      {% endif %}
     {% endfor %}
     </div>
   </div>
