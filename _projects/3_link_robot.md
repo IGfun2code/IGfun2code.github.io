@@ -75,4 +75,4 @@ As seen in the last two GIFs, the model highly depends on the reward function. I
 
 ## Repository
 
-<a href="https://github.com/IGfun2code/controls_tesla" target="_blank" rel="noopener noreferrer">View the project repository on GitHub</a>
+<a href="https://github.com/IGfun2code/snake-vibe-rl" target="_blank" rel="noopener noreferrer">View the project repository on GitHub</a>
