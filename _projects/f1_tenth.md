@@ -2,7 +2,7 @@
 layout: page
 title: F1 Tenth Racing (In Progress)
 description: Complete end-to-end stack development for an autonomous racing event.
-img: assets/img/4.jpg
+img: 'assets/video/f1tenth/race_example.gif'
 importance: 1
 category: Autonomous Vehicles
 related_publications: false
