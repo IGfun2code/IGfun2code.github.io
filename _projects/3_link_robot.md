@@ -41,6 +41,8 @@ This project reinforced several important ideas for robotics and machine learnin
 
 More broadly, the project helped me deepen my understanding of **robot learning, articulated dynamics, physics-based simulation, and control through interaction**. It was a strong example of how machine learning can be applied to robotics not just for perception or classification, but for generating behavior in complex dynamical systems.
 
+## Model and Simulation
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/rl_snake/reward_function.png" caption="Reward function for actor-critic model" class="img-fluid rounded z-depth-1" %}
@@ -62,6 +64,7 @@ More broadly, the project helped me deepen my understanding of **robot learning,
       </div>
     </div>
 </div>
+As seen in the last two GIFs, the model highly depends on the reward function. In the first GIF, the model had no penalty for the singularity pose, therefore it optimized on a pose where it does not move. In the right GIF, the model avoids the singularity and has learned a wave-form gait.
 
 ## Tools and Methods
 
