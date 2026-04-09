@@ -407,8 +407,8 @@ ninja.data = [{
           description: "Used an Actor Critic model to find the optimal gait of a 3-link robot.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_link_robot/";
-            },},{id: "projects-f1-tenth-racing",
-          title: 'F1 Tenth Racing',
+            },},{id: "projects-f1-tenth-racing-in-progress",
+          title: 'F1 Tenth Racing (In Progress)',
           description: "Complete end-to-end stack development for an autonomous racing event.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/f1_tenth/";
