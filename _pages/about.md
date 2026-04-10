@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: ishangupta1106@gmail.com
+subtitle: Aspiring automation engineer.
 
 profile:
   align: right
