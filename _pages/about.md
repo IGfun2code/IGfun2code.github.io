@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Aspiring automation engineer.
+subtitle: Aspiring robotics autonomy engineer.
 
 profile:
   align: right
@@ -36,7 +36,7 @@ Here are a few examples of my projects and work:
 
 > Initialized PID control with forward and inverse kinematics on a 3 Degree of Freedom robot arm.
 
-I love connecting with new people, give me a shout @ishangupta1106@gmail.com or here on LinkedIn.
+I love connecting with new people, give me a shout at ishangupta1106@gmail.com or on [https://www.linkedin.com/in/ishang06/](https://www.linkedin.com/in/ishang06/).
 
 ## Resume
 
