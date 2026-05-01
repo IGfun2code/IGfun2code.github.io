@@ -402,7 +402,7 @@ ninja.data = [{
               window.location.href = "/projects/3_link_robot/";
             },},{id: "projects-f1-tenth-racing-in-progress",
           title: 'F1 Tenth Racing (In Progress)',
-          description: "Complete end-to-end stack development for an autonomous racing event.",
+          description: "Autonomous racing is a compact way to develop the same perception, localization, and control capabilities required in real autonomous vehicles. In this project, I built ROS2-based autonomy modules for an F1TENTH platform, integrating LiDAR processing, SLAM/localization, closed-loop control, and a YOLO detector for car-behind-ego perception using a custom dataset. My role focused on connecting perception and control into a functioning indoor autonomy stack, with the current system supporting GPS-denied navigation, real-time pose estimation, and learned perception for race-relevant interactions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/f1_tenth/";
             },},{id: "projects-motion-control-for-autonomous-vehicles-and-drones",
