@@ -1,7 +1,7 @@
 ---
 layout: page
 title: RL Trajectory Generation for Interactive Autonomous Driving
-description: Closed-loop trajectory planning in CARLA using PPO for highway merges, left turns, and cut-in analysis.
+description: Interactive urban driving requires autonomous vehicles to make safe decisions around uncertain human behavior, especially in merges and other high interaction scenarios. In this project, I developed a PPO-based behavior planner in CARLA and designed observation and reward formulations that reason over ego state, nearby traffic, safety margins, and uncertain outcomes while interfacing with low-level control. I evaluated the planner across varying traffic densities using success and collision metrics, and the learned local planner achieved a 3% higher success rate than the baseline in a highway merging scenario.
 img: '/assets/video/rl_trajectory/highway_merge.gif'
 importance: 2
 category: Autonomous Vehicles

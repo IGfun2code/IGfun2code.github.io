@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Motion Control for Autonomous Vehicles and Drones
-description: Integrated planning, state estimation, optimal control, and adaptive flight control in Webots.
+description: Reliable autonomy depends on combining planning, estimation, and feedback control in systems that can operate accurately even when conditions change. In this project, I developed a simulated control stack in Webots for both ground and aerial vehicles, using PID and pole placement for vehicle tracking, LQR and A* for improved obstacle-aware navigation (overtaking a vehicle), EKF-based SLAM for localization, and MRAC with an LQR baseline for quadrotor fault tolerance. I contributed the control and autonomy implementation, and the resulting system achieved 0.47 m average trajectory discrepancy, reduced completion time by 20% with LQR and A* replanning, maintained 0.7 m average tracking error with SLAM, and sustained quadrotor flight under up to 68% thrust loss in one motor.
 img: 'assets/img/modern_control_theory/sim_pic.png'
 importance: 3
 category: Autonomous Vehicles

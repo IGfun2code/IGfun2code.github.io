@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Simulated 3-linked Robot
-description: Used an Actor Critic model to find the optimal gait of a 3-link robot.
+description: Learning locomotion for articulated robots is important for future systems that must move through constrained or irregular environments where hand-designed control can be brittle. In this project, I built a MuJoCo simulation of a 3-link snake robot and used PyTorch-based reinforcement learning SAC model to study how reward shaping affects locomotion under kinematic singularities. My contribution focused on designing and evaluating reward terms that balanced forward displacement, energy efficiency, and singularity avoidance. Through this project, I learned that these design choices strongly affected policy stability and failure modes across thousands of simulated episodes.
 img: 'assets/video/snake_bot/rl_singularity.gif'
 importance: 1
 category: Robotics
