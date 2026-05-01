@@ -397,7 +397,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-simulated-3-linked-robot",
           title: 'Simulated 3-linked Robot',
-          description: "Used an Actor Critic model to find the optimal gait of a 3-link robot.",
+          description: "Learning locomotion for articulated robots is important for future systems that must move through constrained or irregular environments where hand-designed control can be brittle. In this project, I built a MuJoCo simulation of a 3-link snake robot and used PyTorch-based reinforcement learning SAC model to study how reward shaping affects locomotion under kinematic singularities. My contribution focused on designing and evaluating reward terms that balanced forward displacement, energy efficiency, and singularity avoidance. Through this project, I learned that these design choices strongly affected policy stability and failure modes across thousands of simulated episodes.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_link_robot/";
             },},{id: "projects-f1-tenth-racing-in-progress",
@@ -407,17 +407,17 @@ ninja.data = [{
               window.location.href = "/projects/f1_tenth/";
             },},{id: "projects-motion-control-for-autonomous-vehicles-and-drones",
           title: 'Motion Control for Autonomous Vehicles and Drones',
-          description: "Integrated planning, state estimation, optimal control, and adaptive flight control in Webots.",
+          description: "Reliable autonomy depends on combining planning, estimation, and feedback control in systems that can operate accurately even when conditions change. In this project, I developed a simulated control stack in Webots for both ground and aerial vehicles, using PID and pole placement for vehicle tracking, LQR and A* for improved obstacle-aware navigation (overtaking a vehicle), EKF-based SLAM for localization, and MRAC with an LQR baseline for quadrotor fault tolerance. I contributed the control and autonomy implementation, and the resulting system achieved 0.47 m average trajectory discrepancy, reduced completion time by 20% with LQR and A* replanning, maintained 0.7 m average tracking error with SLAM, and sustained quadrotor flight under up to 68% thrust loss in one motor.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/modern_control_theory/";
             },},{id: "projects-rl-trajectory-generation-for-interactive-autonomous-driving",
           title: 'RL Trajectory Generation for Interactive Autonomous Driving',
-          description: "Closed-loop trajectory planning in CARLA using PPO for highway merges, left turns, and cut-in analysis.",
+          description: "Interactive urban driving requires autonomous vehicles to make safe decisions around uncertain human behavior, especially in merges and other high interaction scenarios. In this project, I developed a PPO-based behavior planner in CARLA and designed observation and reward formulations that reason over ego state, nearby traffic, safety margins, and uncertain outcomes while interfacing with low-level control. I evaluated the planner across varying traffic densities using success and collision metrics, and the learned local planner achieved a 3% higher success rate than the baseline in a highway merging scenario.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rl_trajectory/";
-            },},{id: "projects-robotex-competition",
-          title: 'Robotex Competition',
-          description: "2nd place in the international Robotics competition",
+            },},{id: "projects-robotex-international-competition",
+          title: 'Robotex International Competition',
+          description: "Autonomous planetary-style robots must operate under severe size, cost, and reliability constraints while still completing meaningful tasks in uncertain terrain. For the Robotex Moon Rover competition, I lead the design of an autonomous rover that could navigate obstacles, collect and sort rock samples, and return to base on a tight budget. My role emphasized locomotion and mechanical design. For locomotion I helped design a greedy obstacle-avoidance algorithm using time-of-flight sensor feedback. For design, I created a FDM-printed chassis optimized for strength-to-weight ratio, and an adjustable intake system with a four-bar linkage and custom press-fit components. The rover placed second in the international competition, demonstrating that low-cost sensing and iterative mechanical design could still produce strong autonomous performance.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/robotex/";
             },},{id: "teachings-data-science-fundamentals",
