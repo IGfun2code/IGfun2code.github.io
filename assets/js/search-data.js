@@ -400,8 +400,8 @@ ninja.data = [{
           description: "Learning locomotion for articulated robots is important for future systems that must move through constrained or irregular environments where hand-designed control can be brittle. In this project, I built a MuJoCo simulation of a 3-link snake robot and used PyTorch-based reinforcement learning SAC model to study how reward shaping affects locomotion under kinematic singularities. My contribution focused on designing and evaluating reward terms that balanced forward displacement, energy efficiency, and singularity avoidance. Through this project, I learned that these design choices strongly affected policy stability and failure modes across thousands of simulated episodes.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_link_robot/";
-            },},{id: "projects-f1-tenth-racing-in-progress",
-          title: 'F1 Tenth Racing (In Progress)',
+            },},{id: "projects-f1-tenth-racing",
+          title: 'F1 Tenth Racing',
           description: "Autonomous racing is a compact way to develop the same perception, localization, and control capabilities required in real autonomous vehicles. In this project, I built ROS2-based autonomy modules for an F1TENTH platform, integrating LiDAR processing, SLAM/localization, closed-loop control, and a YOLO detector for car-behind-ego perception using a custom dataset. My role focused on connecting perception and control into a functioning indoor autonomy stack, with the current system supporting GPS-denied navigation, real-time pose estimation, and learned perception for race-relevant interactions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/f1_tenth/";
