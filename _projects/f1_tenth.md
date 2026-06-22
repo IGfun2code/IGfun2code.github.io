@@ -2,9 +2,15 @@
 layout: page
 title: F1 Tenth Racing (In Progress)
 description: Complete end-to-end stack development for an autonomous racing event.
-img: 'assets/video/f1tenth/race_example.gif'
+img: "assets/video/f1tenth/race_example.gif"
 importance: 1
 category: Autonomous Vehicles
+skills:
+  - ROS 2
+  - Autonomous Racing
+  - Motion Planning
+  - Perception
+  - Control
 related_publications: false
 draft: true
 ---

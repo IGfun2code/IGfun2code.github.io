@@ -5,6 +5,12 @@ description: 2nd place in the international Robotics competition
 img: assets/img/robotex/robot.png
 importance: 4
 category: Robotics
+skills:
+  - SolidWorks
+  - 3D Printing
+  - DFMA
+  - System Integration
+  - Sensor Packaging
 giscus_comments: true
 ---
 
@@ -65,7 +71,6 @@ More broadly, Robotex was one of my strongest experiences in building a robot as
     </div>
 </div>
 The rover architecture centered around four main subsystems: intake, drive, sorting, and solar, all developed within an approximately $150 total budget.
-
 
 ## Tools and Methods
 

@@ -2,22 +2,28 @@
 layout: page
 title: RL Trajectory Generation for Interactive Autonomous Driving
 description: Closed-loop trajectory planning in CARLA using PPO for highway merges, left turns, and cut-in analysis.
-img: '/assets/video/rl_trajectory/highway_merge.gif'
+img: "/assets/video/rl_trajectory/highway_merge.gif"
 importance: 2
 category: Autonomous Vehicles
+skills:
+  - CARLA
+  - PPO
+  - Reinforcement Learning
+  - A* Planning
+  - PID Control
 related_publications: false
 ---
 
 This project explores reinforcement learning for short-horizon trajectory generation in highly interactive driving scenarios using CARLA. The goal was to move beyond a purely reactive rule-based planner and instead train a policy that can decide when to yield, commit, slow down, or merge by generating a local trajectory in closed loop. The framework focuses on situations where autonomous vehicles still struggle most: unprotected left turns, highway merges, and sudden cut-ins.
 
-The overall system keeps planning and control separated. A global A*-based route provides the long-horizon path, while a PPO policy reshapes the near-term trajectory online in response to nearby traffic. That local trajectory is then executed by a fixed CARLA PID controller. This architecture makes it possible to improve the planning layer while keeping low-level control unchanged, so performance differences can be attributed mainly to the learned planner rather than to retuned actuation.
+The overall system keeps planning and control separated. A global A\*-based route provides the long-horizon path, while a PPO policy reshapes the near-term trajectory online in response to nearby traffic. That local trajectory is then executed by a fixed CARLA PID controller. This architecture makes it possible to improve the planning layer while keeping low-level control unchanged, so performance differences can be attributed mainly to the learned planner rather than to retuned actuation.
 
 A major focus of the project was building a repeatable evaluation pipeline instead of only training a policy once and reporting a few successful rollouts. I created controlled closed-loop scenarios in CARLA for left turns, highway merges, and abrupt cut-ins, then compared a classical baseline against a PPO-based planner using the same tracker and the same scenario-level metrics for safety, efficiency, and comfort.
 
 ## Technical Highlights
 
 - Built a closed-loop autonomous driving pipeline in CARLA for interactive traffic scenarios
-- Implemented a hierarchical stack with global A* routing, short-horizon local planning, and fixed PID tracking
+- Implemented a hierarchical stack with global A\* routing, short-horizon local planning, and fixed PID tracking
 - Developed a PPO planner that outputs a local trajectory and target speed instead of direct steering/throttle commands
 - Designed observations that combine ego state, route-following status, gap-level merge features, and nearby-vehicle geometry
 - Parameterized local trajectories using three lateral anchor offsets, a reconnection heading bias, and a target-speed command
@@ -73,7 +79,7 @@ The GIFs show the three high-interaction scenarios from left to right: Left turn
 ## Tools and Methods
 
 **Simulation:** CARLA  
-**Planning:** A* global routing, PPO short-horizon local planning  
+**Planning:** A\* global routing, PPO short-horizon local planning  
 **Control:** CARLA VehiclePIDController  
 **Policy Design:** continuous action space, spline-based trajectory generation, interaction-aware reward shaping  
 **Scenarios:** unprotected left turn, highway merge, abrupt cut-in

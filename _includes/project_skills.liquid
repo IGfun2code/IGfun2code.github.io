@@ -1,0 +1,7 @@
+{% if project.skills %}
+  <div class="project-skills" aria-label="Project skills">
+    {% for skill in project.skills %}
+      <span class="project-skill-chip">{{ skill }}</span>
+    {% endfor %}
+  </div>
+{% endif %}
