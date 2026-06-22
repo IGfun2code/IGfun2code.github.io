@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: ishangupta1106@gmail.com
+subtitle: Aspiring robotics autonomy engineer.
 
 profile:
   align: right
-  image: ishan_pic.png
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
 
@@ -24,19 +24,30 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm currently pursuing my Master's degree in Mechanical Engineering at Carnegie Mellon University, with a concentration in robotics. I'm interested in Machine Learning and Controls engineering internships for Summer 2026.
+I'm a Master's student in Mechanical Engineering at Carnegie Mellon University focused on **autonomous robotics**, with interests in **learning-based planning, perception, and control**. I enjoy building systems that turn sensing and decision-making into reliable robot behavior, especially for autonomous vehicles and mobile robots.
 
-I have an undergraduate degree in Mechanical Engineering from the University of Texas at Austin and previous internship experience assisting with creating an autonomous vehicle for hazardous locations.
+My recent work includes:
 
-Here are a few examples of my projects and work:
+> developing a **ROS2-based F1TENTH autonomy stack** with LiDAR localization and closed-loop control
+> building a **PPO behavior planner in CARLA** for interactive urban driving in high collision scenarios
+> training **reinforcement learning policies for locomotion** in a 3-link snake robot. 
 
-> Pioneered a novel two-robot system direction during my internship by conceptualizing anchor systems & a companion robot to manage a tether.
+Across these projects, I’ve focused on connecting simulation, machine learning, and control into practical autonomy pipelines.
 
-> Led a team to achieve 2nd place in the International Robotex competition by designing an mini autonomous moon rover that can traverse various terrain and sort specific rocks.
+Previously, I studied Mechanical Engineering at UT Austin and worked on robotics systems for hazardous environments, including tether-management and inspection concepts at Pike Robotics. I’m currently looking for opportunities in **autonomy, robot learning, controls, and perception**.
 
-> Initialized PID control with forward and inverse kinematics on a 3 Degree of Freedom robot arm.
+Feel free to reach out at ishangupta1106@gmail.com or connect on [LinkedIn](https://www.linkedin.com/in/ishang06/).
 
-I love connecting with new people, give me a shout @ishangupta1106@gmail.com or here on LinkedIn.
+## Resume
+
+<div class="mt-3">
+  <iframe
+    src="{{ '/assets/pdf/resume.pdf' | relative_url }}"
+    width="100%"
+    height="900"
+    style="border: 1px solid var(--global-divider-color); border-radius: 6px;"
+  ></iframe>
+</div>
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

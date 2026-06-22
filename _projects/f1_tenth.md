@@ -1,8 +1,8 @@
 ---
 layout: page
-title: F1 Tenth Racing (In Progress)
+title: F1 Tenth Racing
 description: Complete end-to-end stack development for an autonomous racing event.
-img: "assets/video/f1tenth/race_example.gif"
+img: 'assets/video/f1tenth/race_example.gif'
 importance: 1
 category: Autonomous Vehicles
 skills:
@@ -12,7 +12,8 @@ skills:
   - Perception
   - Control
 related_publications: false
-draft: true
+redirect: https://github.com/IGfun2code/f1tenth_blocking_rl
+draft: false
 ---
 
 Every project has a beautiful feature showcase page.

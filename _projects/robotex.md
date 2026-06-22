@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Robotex Competition
-description: 2nd place in the international Robotics competition
+title: Robotex International Competition
+description: Autonomous planetary-style robots must operate under severe size, cost, and reliability constraints while still completing meaningful tasks in uncertain terrain. For the Robotex Moon Rover competition, I lead the design of an autonomous rover that could navigate obstacles, collect and sort rock samples, and return to base on a tight budget. My role emphasized locomotion and mechanical design. For locomotion I helped design a greedy obstacle-avoidance algorithm using time-of-flight sensor feedback. For design, I created a FDM-printed chassis optimized for strength-to-weight ratio, and an adjustable intake system with a four-bar linkage and custom press-fit components. The rover placed second in the international competition, demonstrating that low-cost sensing and iterative mechanical design could still produce strong autonomous performance.
 img: assets/img/robotex/robot.png
 importance: 4
 category: Robotics
