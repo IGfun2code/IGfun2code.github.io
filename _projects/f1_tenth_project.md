@@ -1,89 +1,84 @@
+```markdown
 ---
 layout: page
-title: F1 Tenth Racing
-description: Built ROS2 autonomy modules for an F1TENTH racing platform, combining LiDAR processing, SLAM/localization, and closed-loop control for indoor navigation. I also trained a YOLO detector on a custom dataset to support car-behind-ego perception for race-relevant interactions.
-img: 'assets/video/f1tenth/race_example.gif'
-importance: 1
+title: Learning Defensive Blocking for F1TENTH Racing
+description: Developed a hybrid autonomy stack for two-agent F1TENTH racing that used PPO to learn defensive blocking decisions while keeping low-level path planning and control classical.
+img: '/assets/img/f1tenth_blocking_cover.png'
+importance: 2
 category: Autonomous Vehicles
 related_publications: false
-redirect: https://github.com/IGfun2code/f1tenth_blocking_rl
-draft: false
 skills:
-  - ROS2
-  - LiDAR
-  - SLAM
-  - YOLO
-  - Autonomous Racing
+  - F1TENTH
+  - PPO
+  - Multi-Agent Autonomy
+  - Behavior Planning
+  - RRT*
+  - Pure Pursuit
 ---
- 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project explored whether reinforcement learning could improve **defensive behavior selection** in autonomous racing without replacing the full planning and control stack. Instead of training an end-to-end racing agent, I focused on a narrower and more practical problem: learning when and how an ego vehicle should block an opponent attempting an overtake. The goal was to determine whether learning adds value at the behavior layer while keeping path generation and tracking classical and interpretable.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The system used a **hybrid autonomy architecture**. A PPO policy selected high-level blocking parameters, while the downstream path was executed through a blocking-path generator, local RRT* replanning, and dynamic pure pursuit control. This structure made the learned component easier to train, compare, and debug, since the policy only had to reason about defensive intent rather than raw steering and speed control.
+
+To make the learned behavior responsive to race context, I designed an observation space that combined opponent-relative motion history, distance, closing speed, track geometry, ego lateral offset, signed progress gap, and opponent probing behavior. The policy then produced continuous blocking decisions that adjusted how aggressively the ego vehicle moved to defend its line and how quickly it returned to the raceline afterward.
+
+## Technical Highlights
+
+- Built a **two-agent F1TENTH racing stack** for interactive defensive behavior
+- Designed a **PPO policy** for blocking decisions instead of end-to-end racing control
+- Used a **38-dimensional observation space** capturing opponent intent and track context
+- Defined a **3-dimensional continuous action space** for blocking offset, hold time, and return-to-raceline rate
+- Integrated RL with **blocking path generation, local RRT\***, and **dynamic pure pursuit**
+- Created a randomized training environment with varied spawn gap, lateral offset, and yaw for robustness
+- Compared the learned policy against a **history-based rule baseline** using the same downstream action interface
+- Built a sim-to-real perception path using a **rear-facing RealSense + YOLO pipeline** for opponent-relative state estimation
+
+## Results
+
+The main result of the project was that both the PPO policy and the rule-based baseline achieved **100% task success** in the reported simulation evaluation. The baseline was slightly faster and more consistent, while the learned policy showed more adaptive and context-dependent blocking behavior.
+
+The **rule-based baseline** completed the task in an average of **13.37 s**, with **6.92 s** of threat time, **8.41 s** of block time, and **0.83 s** response time. The **PPO policy** completed the task in an average of **13.73 s**, with **7.97 s** of threat time, **5.50 s** of block time, and **1.13 s** response time. Gap-over-time analysis showed that the rule baseline produced smoother, more monotonic defense, while PPO sometimes allowed the opponent to get closer before recovering and rebuilding the lead.
+
+The key takeaway was that reinforcement learning did not outperform the baseline in raw speed or consistency, but it matched task success while producing more flexible blocking behavior that depended on opponent motion and race context. That result supports the idea that learning is most useful at the **behavior-selection layer**, where hard-coded thresholds can become brittle.
+
+## Simulation
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+      <img src="{{ '/assets/video/f1tenth_blocking/ppo_blocking.gif' | relative_url }}" 
+         alt="PPO defensive blocking in F1TENTH simulation" 
+         class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+      <img src="{{ '/assets/video/f1tenth_blocking/rule_baseline.gif' | relative_url }}" 
+         alt="Rule-based defensive blocking baseline" 
+         class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+      <img src="{{ '/assets/img/f1tenth_blocking_metrics.png' | relative_url }}" 
+         alt="Blocking evaluation metrics and gap analysis" 
+         class="img-fluid rounded z-depth-1">
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+The visuals compare the PPO blocker, the rule-based baseline, and the resulting evaluation metrics. Together they show how the learned policy produced more flexible context-dependent defense, while the baseline remained smoother and slightly faster.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## Key Takeaways
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+This project reinforced the value of **hybrid autonomy systems** that combine learning with classical robotics methods. Instead of forcing RL to solve the entire racing problem, I used it where it was most likely to help: deciding how to respond to uncertain opponent behavior. The project also showed that careful observation design, reward shaping, and evaluation tooling are just as important as the choice of learning algorithm.
 
-{% raw %}
+More broadly, this work helped me better understand how to structure learning problems in robotics so they remain measurable, debuggable, and relevant to real autonomous systems. That is especially important in multi-agent settings, where the hardest part is often not the low-level control itself, but deciding how the robot should behave in response to another agent.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
+## Tools and Methods
+
+**Platform:** F1TENTH simulation  
+**Learning:** PPO behavior policy  
+**Planning:** blocking path generation, local RRT* replanning  
+**Control:** dynamic pure pursuit  
+**Perception for deployment:** rear-view RealSense + YOLO  
+**Focus Areas:** multi-agent autonomy, defensive behavior planning, hybrid learning and control
+
+## Repository
+
+<a href="https://github.com/IGfun2code/f1tenth_blocking_rl" target="_blank" rel="noopener noreferrer">View the project repository on GitHub</a>
 ```
-
-{% endraw %}
