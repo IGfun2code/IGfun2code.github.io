@@ -397,22 +397,22 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-simulated-3-linked-robot",
           title: 'Simulated 3-linked Robot',
-          description: "Learning locomotion for articulated robots is important for future systems that must move through constrained or irregular environments where hand-designed control can be brittle. In this project, I built a MuJoCo simulation of a 3-link snake robot and used PyTorch-based reinforcement learning SAC model to study how reward shaping affects locomotion under kinematic singularities. My contribution focused on designing and evaluating reward terms that balanced forward displacement, energy efficiency, and singularity avoidance. Through this project, I learned that these design choices strongly affected policy stability and failure modes across thousands of simulated episodes.",
+          description: "Used an Actor Critic model to find the optimal gait of a 3-link robot.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_link_robot/";
             },},{id: "projects-f1-tenth-racing",
           title: 'F1 Tenth Racing',
-          description: "Autonomous racing is a compact way to develop the same perception, localization, and control capabilities required in real autonomous vehicles. In this project, I built ROS2-based autonomy modules for an F1TENTH platform, integrating LiDAR processing, SLAM/localization, closed-loop control, and a YOLO detector for car-behind-ego perception using a custom dataset. My role focused on connecting perception and control into a functioning indoor autonomy stack, with the current system supporting GPS-denied navigation, real-time pose estimation, and learned perception for race-relevant interactions.",
+          description: "Complete end-to-end stack development for an autonomous racing event.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/f1_tenth/";
             },},{id: "projects-motion-control-for-autonomous-vehicles-and-drones",
           title: 'Motion Control for Autonomous Vehicles and Drones',
-          description: "Reliable autonomy depends on combining planning, estimation, and feedback control in systems that can operate accurately even when conditions change. In this project, I developed a simulated control stack in Webots for both ground and aerial vehicles, using PID and pole placement for vehicle tracking, LQR and A* for improved obstacle-aware navigation (overtaking a vehicle), EKF-based SLAM for localization, and MRAC with an LQR baseline for quadrotor fault tolerance. I contributed the control and autonomy implementation, and the resulting system achieved 0.47 m average trajectory discrepancy, reduced completion time by 20% with LQR and A* replanning, maintained 0.7 m average tracking error with SLAM, and sustained quadrotor flight under up to 68% thrust loss in one motor.",
+          description: "Integrated planning, state estimation, optimal control, and adaptive flight control in Webots.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/modern_control_theory/";
             },},{id: "projects-rl-trajectory-generation-for-interactive-autonomous-driving",
           title: 'RL Trajectory Generation for Interactive Autonomous Driving',
-          description: "Interactive urban driving requires autonomous vehicles to make safe decisions around uncertain human behavior, especially in merges and other high interaction scenarios. In this project, I developed a PPO-based behavior planner in CARLA and designed observation and reward formulations that reason over ego state, nearby traffic, safety margins, and uncertain outcomes while interfacing with low-level control. I evaluated the planner across varying traffic densities using success and collision metrics, and the learned local planner achieved a 3% higher success rate than the baseline in a highway merging scenario.",
+          description: "Closed-loop trajectory planning in CARLA using PPO for highway merges, left turns, and cut-in analysis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rl_trajectory/";
             },},{id: "projects-robotex-international-competition",
