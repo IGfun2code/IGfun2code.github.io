@@ -405,6 +405,11 @@ ninja.data = [{
           description: "Built ROS2 autonomy modules for an F1TENTH racing platform, combining LiDAR processing, SLAM/localization, and closed-loop control for indoor navigation. I also trained a YOLO detector on a custom dataset to support car-behind-ego perception for race-relevant interactions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/f1_tenth/";
+            },},{id: "projects-learning-defensive-blocking-for-f1tenth-racing",
+          title: 'Learning Defensive Blocking for F1TENTH Racing',
+          description: "Developed a hybrid autonomy stack for two-agent F1TENTH racing that used PPO to learn defensive blocking decisions while keeping low-level path planning and control classical.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/f1_tenth_project/";
             },},{id: "projects-motion-control-for-autonomous-vehicles-and-drones",
           title: 'Motion Control for Autonomous Vehicles and Drones',
           description: "Developed Webots control stacks for ground and aerial autonomy, including PID, pole placement, LQR, A* replanning, EKF SLAM, and MRAC. The system improved vehicle navigation performance and maintained quadrotor flight under severe motor thrust loss.",
