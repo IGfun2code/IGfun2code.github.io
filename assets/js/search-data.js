@@ -397,27 +397,32 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-simulated-3-linked-robot",
           title: 'Simulated 3-linked Robot',
-          description: "Used an Actor Critic model to find the optimal gait of a 3-link robot.",
+          description: "Built a MuJoCo simulation of a 3-link snake robot and trained a PyTorch SAC policy to learn forward locomotion without a hand-designed gait. The project focused on reward shaping, energy efficiency, and singularity avoidance to improve policy stability across repeated simulations.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_link_robot/";
             },},{id: "projects-f1-tenth-racing",
           title: 'F1 Tenth Racing',
-          description: "Complete end-to-end stack development for an autonomous racing event.",
+          description: "Built ROS2 autonomy modules for an F1TENTH racing platform, combining LiDAR processing, SLAM/localization, and closed-loop control for indoor navigation. I also trained a YOLO detector on a custom dataset to support car-behind-ego perception for race-relevant interactions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/f1_tenth/";
+            },},{id: "projects-f1-tenth-racing",
+          title: 'F1 Tenth Racing',
+          description: "Built ROS2 autonomy modules for an F1TENTH racing platform, combining LiDAR processing, SLAM/localization, and closed-loop control for indoor navigation. I also trained a YOLO detector on a custom dataset to support car-behind-ego perception for race-relevant interactions.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/f1_tenth_project/";
             },},{id: "projects-motion-control-for-autonomous-vehicles-and-drones",
           title: 'Motion Control for Autonomous Vehicles and Drones',
-          description: "Integrated planning, state estimation, optimal control, and adaptive flight control in Webots.",
+          description: "Developed Webots control stacks for ground and aerial autonomy, including PID, pole placement, LQR, A* replanning, EKF SLAM, and MRAC. The system improved vehicle navigation performance and maintained quadrotor flight under severe motor thrust loss.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/modern_control_theory/";
             },},{id: "projects-rl-trajectory-generation-for-interactive-autonomous-driving",
           title: 'RL Trajectory Generation for Interactive Autonomous Driving',
-          description: "Closed-loop trajectory planning in CARLA using PPO for highway merges, left turns, and cut-in analysis.",
+          description: "Developed a PPO-based behavior planner in CARLA for interactive driving scenarios such as highway merges, left turns, and cut-ins. The planner used custom observations and rewards to reason about traffic, safety margins, and local trajectory decisions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rl_trajectory/";
             },},{id: "projects-robotex-international-competition",
           title: 'Robotex International Competition',
-          description: "Autonomous planetary-style robots must operate under severe size, cost, and reliability constraints while still completing meaningful tasks in uncertain terrain. For the Robotex Moon Rover competition, I lead the design of an autonomous rover that could navigate obstacles, collect and sort rock samples, and return to base on a tight budget. My role emphasized locomotion and mechanical design. For locomotion I helped design a greedy obstacle-avoidance algorithm using time-of-flight sensor feedback. For design, I created a FDM-printed chassis optimized for strength-to-weight ratio, and an adjustable intake system with a four-bar linkage and custom press-fit components. The rover placed second in the international competition, demonstrating that low-cost sensing and iterative mechanical design could still produce strong autonomous performance.",
+          description: "Led mechanical design and system integration for a compact autonomous rover built for the Robotex Moon Rover competition. The rover used low-cost sensing, obstacle avoidance, and a custom intake system to collect samples and earned second place internationally.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/robotex/";
             },},{id: "teachings-data-science-fundamentals",
