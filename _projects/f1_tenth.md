@@ -6,7 +6,6 @@ img: 'assets/video/f1tenth/race_example.gif'
 importance: 1
 category: Autonomous Vehicles
 related_publications: false
-redirect: https://github.com/IGfun2code/f1tenth_blocking_rl
 draft: false
 skills:
   - ROS2

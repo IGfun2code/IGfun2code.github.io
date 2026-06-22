@@ -1,4 +1,3 @@
-```markdown
 ---
 layout: page
 title: Learning Defensive Blocking for F1TENTH Racing
@@ -81,4 +80,4 @@ More broadly, this work helped me better understand how to structure learning pr
 ## Repository
 
 <a href="https://github.com/IGfun2code/f1tenth_blocking_rl" target="_blank" rel="noopener noreferrer">View the project repository on GitHub</a>
-```
+
