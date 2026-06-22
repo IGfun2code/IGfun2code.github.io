@@ -1,11 +1,17 @@
 ---
 layout: page
 title: Simulated 3-linked Robot
-description: Learning locomotion for articulated robots is important for future systems that must move through constrained or irregular environments where hand-designed control can be brittle. In this project, I built a MuJoCo simulation of a 3-link snake robot and used PyTorch-based reinforcement learning SAC model to study how reward shaping affects locomotion under kinematic singularities. My contribution focused on designing and evaluating reward terms that balanced forward displacement, energy efficiency, and singularity avoidance. Through this project, I learned that these design choices strongly affected policy stability and failure modes across thousands of simulated episodes.
+description: Built a MuJoCo simulation of a 3-link snake robot and trained a PyTorch SAC policy to learn forward locomotion without a hand-designed gait. The project focused on reward shaping, energy efficiency, and singularity avoidance to improve policy stability across repeated simulations.
 img: 'assets/video/snake_bot/rl_singularity.gif'
 importance: 1
 category: Robotics
 related_publications: false
+skills:
+  - MuJoCo
+  - PyTorch
+  - Reinforcement Learning
+  - SAC
+  - Reward Design
 ---
 
 This personal project explored how reinforcement learning can be used to generate locomotion strategies for a **3-link planar snake robot** without prescribing a reference gait. Conducted with support from **Dr. Howie**, the project focused on building a physics-based simulation environment and training a policy that could discover coordinated joint motion directly through interaction with the dynamics. Rather than hand-designing sinusoidal motion patterns, the goal was to let the robot learn how to move forward on its own.

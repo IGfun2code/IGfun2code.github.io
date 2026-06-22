@@ -154,6 +154,8 @@ ul.task-list input[type="checkbox"] {
   }
 
   .card {
+    position: relative;
+
     img {
       width: 100%;
     }
@@ -166,6 +168,48 @@ ul.task-list input[type="checkbox"] {
     .card-title {
       font-size: 1.35rem;
     }
+
+    &:hover {
+      .card-title {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .project-card-link::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: "";
+  }
+
+  .project-skill-chips {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: -0.25rem 0 1rem;
+  }
+
+  .project-skill-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.65rem;
+    padding: 0.2rem 0.6rem;
+    color: var(--global-theme-color);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: default;
+    background-color: rgba(38, 139, 210, 0.08);
+    border: 1px solid var(--global-theme-color);
+    border-radius: 999px;
+  }
+
+  .github-icon {
+    position: relative;
+    z-index: 2;
   }
 
   .col {

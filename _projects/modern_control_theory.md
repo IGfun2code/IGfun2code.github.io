@@ -1,11 +1,17 @@
 ---
 layout: page
 title: Motion Control for Autonomous Vehicles and Drones
-description: Reliable autonomy depends on combining planning, estimation, and feedback control in systems that can operate accurately even when conditions change. In this project, I developed a simulated control stack in Webots for both ground and aerial vehicles, using PID and pole placement for vehicle tracking, LQR and A* for improved obstacle-aware navigation (overtaking a vehicle), EKF-based SLAM for localization, and MRAC with an LQR baseline for quadrotor fault tolerance. I contributed the control and autonomy implementation, and the resulting system achieved 0.47 m average trajectory discrepancy, reduced completion time by 20% with LQR and A* replanning, maintained 0.7 m average tracking error with SLAM, and sustained quadrotor flight under up to 68% thrust loss in one motor.
+description: Developed Webots control stacks for ground and aerial autonomy, including PID, pole placement, LQR, A* replanning, EKF SLAM, and MRAC. The system improved vehicle navigation performance and maintained quadrotor flight under severe motor thrust loss.
 img: 'assets/img/modern_control_theory/sim_pic.png'
 importance: 3
 category: Autonomous Vehicles
 related_publications: false
+skills:
+  - Webots
+  - LQR
+  - A*
+  - EKF SLAM
+  - MRAC
 ---
 
 This project explores how modern control and autonomy methods can be applied across both ground and aerial systems within a shared simulation workflow in Webots. On the ground side, I developed controllers and planning pipelines for a Tesla vehicle driving on the Schenley Park map, progressing from baseline trajectory tracking to obstacle-aware replanning and localization. In parallel, I extended the same control-focused approach to a quadrotor, designing an adaptive controller that maintained flight performance under severe actuator degradation.

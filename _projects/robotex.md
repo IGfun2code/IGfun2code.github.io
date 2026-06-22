@@ -1,11 +1,17 @@
 ---
 layout: page
 title: Robotex International Competition
-description: Autonomous planetary-style robots must operate under severe size, cost, and reliability constraints while still completing meaningful tasks in uncertain terrain. For the Robotex Moon Rover competition, I lead the design of an autonomous rover that could navigate obstacles, collect and sort rock samples, and return to base on a tight budget. My role emphasized locomotion and mechanical design. For locomotion I helped design a greedy obstacle-avoidance algorithm using time-of-flight sensor feedback. For design, I created a FDM-printed chassis optimized for strength-to-weight ratio, and an adjustable intake system with a four-bar linkage and custom press-fit components. The rover placed second in the international competition, demonstrating that low-cost sensing and iterative mechanical design could still produce strong autonomous performance.
+description: Led mechanical design and system integration for a compact autonomous rover built for the Robotex Moon Rover competition. The rover used low-cost sensing, obstacle avoidance, and a custom intake system to collect samples and earned second place internationally.
 img: assets/img/robotex/robot.png
 importance: 4
 category: Robotics
 giscus_comments: true
+skills:
+  - SolidWorks
+  - 3D Printing
+  - DFMA
+  - Sensor Integration
+  - Rapid Prototyping
 ---
 
 This project was an end-to-end autonomous robotics effort for the **Robotex International Mini Moon Rover Competition** in Estonia. The objective was to design and build a compact rover from scratch that could autonomously traverse an obstacle field, identify and collect specific colored rock samples, and return to base. The system had to fit within a **20 cm³ box**, remain under **2 kg**, and stay within a strict **$150 budget**, which made every design choice a tradeoff between capability, manufacturability, and reliability. Our team ultimately earned **2nd place** in the international competition representing the USA.

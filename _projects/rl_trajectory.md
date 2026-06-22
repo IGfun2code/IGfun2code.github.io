@@ -1,11 +1,17 @@
 ---
 layout: page
 title: RL Trajectory Generation for Interactive Autonomous Driving
-description: Interactive urban driving requires autonomous vehicles to make safe decisions around uncertain human behavior, especially in merges and other high interaction scenarios. In this project, I developed a PPO-based behavior planner in CARLA and designed observation and reward formulations that reason over ego state, nearby traffic, safety margins, and uncertain outcomes while interfacing with low-level control. I evaluated the planner across varying traffic densities using success and collision metrics, and the learned local planner achieved a 3% higher success rate than the baseline in a highway merging scenario.
+description: Developed a PPO-based behavior planner in CARLA for interactive driving scenarios such as highway merges, left turns, and cut-ins. The planner used custom observations and rewards to reason about traffic, safety margins, and local trajectory decisions.
 img: '/assets/video/rl_trajectory/highway_merge.gif'
 importance: 2
 category: Autonomous Vehicles
 related_publications: false
+skills:
+  - CARLA
+  - PPO
+  - Behavior Planning
+  - Reward Design
+  - Scenario Evaluation
 ---
 
 This project explores reinforcement learning for short-horizon trajectory generation in highly interactive driving scenarios using CARLA. The goal was to move beyond a purely reactive rule-based planner and instead train a policy that can decide when to yield, commit, slow down, or merge by generating a local trajectory in closed loop. The framework focuses on situations where autonomous vehicles still struggle most: unprotected left turns, highway merges, and sudden cut-ins.
