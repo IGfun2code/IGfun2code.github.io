@@ -18,9 +18,7 @@ skills:
   - Autonomous Racing
 ---
 
-This project page summarizes the autonomy modules I developed throughout the F1TENTH autonomous racing course. The class followed the full stack of a small-scale autonomous race car: low-level safety and reactive navigation, map-based localization, sampling-based motion planning, trajectory tracking, model predictive control, visual perception, and a final project focused on competitive multi-agent racing behavior.
-
-The goal was to move from simple sensor-to-control policies toward a complete racing architecture that could perceive the environment, estimate vehicle state, plan around obstacles, track a raceline, and reason about other vehicles on the track. Each assignment added one layer to the stack, and the later projects reused earlier components such as LiDAR preprocessing, occupancy-grid reasoning, waypoint tracking, and speed/lookahead tuning.
+This project page summarizes the autonomy modules I developed throughout my F1TENTH autonomous racing experience. The goal was to move from simple sensor-to-control policies toward a complete racing architecture that could perceive the environment, estimate vehicle state, plan around obstacles, track a raceline, and reason about other vehicles on the track. Each assignment added one layer to the stack, and the later projects reused earlier components such as LiDAR preprocessing, occupancy-grid reasoning, waypoint tracking, and speed/lookahead tuning.
 
 ## Reactive control and obstacle avoidance
 
@@ -28,7 +26,7 @@ The first autonomy modules focused on driving directly from LiDAR observations. 
 
 In **gap following**, I extended the LiDAR pipeline from tracking a wall to selecting safe free space. The algorithm filtered the scan, created a safety bubble around the closest obstacle, identified the largest navigable gap, and steered toward a goal point inside that gap. This produced a more flexible reactive obstacle-avoidance behavior, useful for cluttered tracks and as a baseline for later planning methods.
 
-Together, these labs formed the first racing baseline: sense the nearest geometry, choose a local steering target, and command speed based on how confidently the car could continue through the environment.
+Together, this formed the first racing baseline: sense the nearest geometry, choose a local steering target, and command speed based on how confidently the car could continue through the environment.
 
 ## Localization and map-based racing
 
@@ -58,16 +56,6 @@ In the context of the full stack, MPC served as a comparison point for pure purs
 
 The perception module focused on **YOLO-based object detection** for identifying other F1TENTH vehicles. This added a camera-based perception layer to the autonomy stack, complementing LiDAR and map-based reasoning. For racing, detecting another car is not only a perception task; it directly affects behavior planning because the ego car must decide whether to follow, block, overtake, or return to the optimal line.
 
-In my final project workflow, the vision component was especially relevant for rear-facing opponent awareness. The broader goal was to use visual detections to estimate whether another vehicle was attempting to pass and then feed that information into a higher-level racing strategy.
-
-## Final project: vision and reinforcement learning for racing strategy
-
-For the final project, my team explored a vision and reinforcement learning strategy for autonomous racing. The project was motivated by the difficulty of manually tuning waypoint following and speed control across the full map, especially when another vehicle is trying to overtake, block, or force a defensive maneuver.
-
-The high-level architecture separated the stack into perception, behavior planning, local planning, and control. The RL policy was designed to reason about opponent behavior and select among racing behaviors such as following the optimal line, blocking, overtaking left or right, disengaging, and adjusting target speed or lookahead. The local planners and low-level controller would then turn those behavior decisions into executable motion.
-
-In the final scoped version, the project emphasized defensive racing behavior: using opponent-relative state and track context to decide when to hold the raceline and when to block an attempted overtake. This connected the full course progression into one system: YOLO-style perception for opponent awareness, map and LiDAR information for state estimation, RRT/RRT* and raceline planning for feasible paths, and pure pursuit or MPC for control.
-
 ## What I learned
 
 Across these projects, I built and tested the major components of an autonomous racing pipeline:
@@ -79,6 +67,5 @@ Across these projects, I built and tested the major components of an autonomous 
 - Waypoint tracking with pure pursuit and dynamic speed/lookahead scaling.
 - Model predictive control for constrained trajectory tracking.
 - YOLO-based visual perception for detecting other vehicles.
-- Behavior-level racing strategy using reinforcement learning concepts.
 
 The main takeaway was that autonomous racing is a systems problem. A fast controller alone is not enough; the car must localize reliably, choose feasible paths, track them smoothly, adapt speed to curvature, and reason about other vehicles. The course projects gave me experience integrating these pieces into a ROS 2 racing stack and debugging the practical issues that appear when algorithms move from clean theory to a real-time autonomous vehicle platform.
