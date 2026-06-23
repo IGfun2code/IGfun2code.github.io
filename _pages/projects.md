@@ -5,7 +5,7 @@ permalink: /projects/
 description: 
 nav: true
 nav_order: 1
-display_categories: [Autonomous Vehicles, Robotics]
+display_categories: [Autonomous Vehicles, Robotics, Bio Engineering]
 horizontal: true
 ---
 
