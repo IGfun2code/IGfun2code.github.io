@@ -410,6 +410,11 @@ ninja.data = [{
           description: "Developed a hybrid autonomy stack for two-agent F1TENTH racing that used PPO to learn defensive blocking decisions while keeping low-level path planning and control classical.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/f1_tenth_project/";
+            },},{id: "projects-multi-agent-reinforcement-learning-for-a-hip-exoskeleton",
+          title: 'Multi-Agent Reinforcement Learning for a Hip Exoskeleton',
+          description: "Ongoing project exploring whether a modular multi-agent controller can improve interpretability and assistance quality for a SCONE-based hip exoskeleton walking model.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/hip_exo/";
             },},{id: "projects-motion-control-for-autonomous-vehicles-and-drones",
           title: 'Motion Control for Autonomous Vehicles and Drones',
           description: "Developed Webots control stacks for ground and aerial autonomy, including PID, pole placement, LQR, A* replanning, EKF SLAM, and MRAC. The system improved vehicle navigation performance and maintained quadrotor flight under severe motor thrust loss.",
