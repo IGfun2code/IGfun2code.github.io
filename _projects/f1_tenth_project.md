@@ -100,24 +100,4 @@ More broadly, this work helped me better understand how to structure learning pr
 <a href="https://github.com/IGfun2code/f1tenth_blocking_rl" target="_blank" rel="noopener noreferrer">View the project repository on GitHub</a>
 
 
-```markdown
----
-layout: page
-title: Autonomous Racing via Reinforcement Learning and Vision-Based Defense
-description: Developed a hybrid autonomy stack for two-agent F1TENTH racing that used PPO to learn defensive blocking decisions while keeping nominal path following, local RRT* replanning, and pure pursuit tracking classical.
-img: '/assets/img/f1tenth_blocking_pipeline.png'
-importance: 2
-category: Autonomous Vehicles
-related_publications: false
-skills:
-  - F1TENTH
-  - PPO
-  - Multi-Agent Autonomy
-  - Behavior Planning
-  - RRT*
-  - Pure Pursuit
-  - YOLO
----
-
-
 
