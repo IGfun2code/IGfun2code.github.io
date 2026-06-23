@@ -2,7 +2,7 @@
 layout: page
 title: Learning Defensive Blocking for F1TENTH Racing
 description: Developed a hybrid autonomy stack for two-agent F1TENTH racing that used PPO to learn defensive blocking decisions while keeping low-level path planning and control classical.
-img: 'assets/video/f1tenth/project/training_ppo_model.mp4'
+img: 'assets/video/f1tenth/project/training_ppo_model.gif'
 importance: 2
 category: Autonomous Vehicles
 related_publications: false
@@ -59,7 +59,7 @@ The main takeaway from the project was that reinforcement learning was useful wh
 
 <div class="row">
     <div class="col-12 mt-3">
-        {% include figure.liquid loading="eager" path="assets/video/f1tenth/project/project_agressive_ppo_2.mp4" caption="Simulation where blue vehicle uses PPO model to block approaching orange vehicle." %}
+        {% include figure.liquid loading="eager" path="assets/video/f1tenth/project/project_agressive_ppo_2.gif" caption="Simulation where blue vehicle uses PPO model to block approaching orange vehicle." %}
     </div>
 </div>
 
